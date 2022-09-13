@@ -5,6 +5,12 @@
 * {
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: white;
 }
 
 body {
@@ -15,7 +21,7 @@ header {
   position: relative;
   display: block;
   min-width: $width;
-  height: 795px;
+  height: 770px;
   h1 {
     position: $relative;
     display: $flex;
@@ -39,7 +45,6 @@ header {
   background-attachment: fixed;
   background-blend-mode: multiply;
   background-color: #4f4f4f;
-  z-index: 0;
 }
 
 #header-block-data {
@@ -48,24 +53,27 @@ header {
   flex-wrap: $flexWrap;
   justify-content: space-around;
   align-items: center;  
-  top: 30px;
   flex-basis: 100%;
-  height: 50px;
+  height: 125px;
+  background-color: $bg-color;
   font-family: $MontserratAlt;
   z-index: 10;
 
-  h2 {
+  img {
+    align-self: flex-start;
     flex-basis: 25%;
-    font-size: 36px;
-    color: $white;
+    width: 300px;
+    height: 125px;
+    background-size: contain;
   }
 
   i {
     display: none;
   }
 
-  p {
+  div {
     display: $flex;
+    flex-wrap: $flexWrap;
     flex-basis: 11%;
     font-size: 18px;
     font-family: $Lato;
@@ -76,7 +84,7 @@ header {
 .header-block-data-menu {
   display: $flex;
   justify-content: space-between;
-  flex-basis: 35%;
+  flex-basis: 40%;
   font-size: 18px;
   @extend %menu-text;
 
@@ -95,7 +103,8 @@ header {
 
 #hamburger-menu {
   i {
-    display: none;
+    display: block;
+    transition: $transition;
   }
 }
 
@@ -107,32 +116,36 @@ header {
   flex-wrap: $flexWrap;
   width: $width;
   height: 900px;
-  background-color:rgb(31, 31, 31);
+  background-color:$bg-color;
   font-family: $Montserrat;
   color: $white;
-  h2 {
-    position: relative;
-    text-align: center;
-    flex-basis: 100vw;
-    margin-top: 60px;
-    height: 100px;
-    font-size: 44px;
-  }
-  p {
-    position: relative;
-    align-self: flex-start;
-    text-align: center;
-    width: 80vw;
-    height: 200px;
-    font-size: 20px;
+  div {
+    height: 300px;
+    h2 {
+      position: relative;
+      text-align: center;
+      flex-basis: 100vw;
+      margin-top: $pad-top;
+      height: 100px;
+      font-size: 44px;
+    }
+    p {
+      position: relative;
+      align-self: flex-start;
+      text-align: center;
+      width: 80vw;
+      height: 150px;
+      font-size: 20px;
+    }
   }
   h3 {
     position: relative;
     align-self: center;
-    text-align: center;
+    margin-top: -50px;
     flex-basis: 100vw;
     height: 100px;
     font-size: 40px;
+    text-align: center;
   }
   span {
     position: relative;
@@ -165,7 +178,84 @@ header {
 /* Конец блока 'О нас' */
 
 #main-priceList {
-  height: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 700px;
+  #main-priceList-background-image {
+    position: $absolute;
+    width: $width;
+    height: 100%;
+    background-image: url('https://itboat.com/uploads/15da/387d8c302c67.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-blend-mode: multiply;
+    background-color: #4f4f4f;
+  }
+  h2 {
+    position: relative;
+    padding-top: $pad-top;
+    width: 100%;
+    height: 100px;
+    font-size: 44px;
+    font-family: $Montserrat;
+    text-align: center;
+    color: $white;
+  }
+  #main-priceList-shop-items {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+    width: 80%;
+    height: 400px;
+    .main-priceList-shop-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 300px;
+      height: 400px;
+      font-family: $Montserrat;
+      text-align: center;
+      background-color: $bg-color;
+      color: white;
+      h3 {
+        padding-top: 20px;
+        width: 100%;
+        height: 40px;
+        font-size: 22px;
+        background-color: #4f4f4f;
+      }
+      .main-priceList-shop-item-price {
+        margin-top: 20px;
+        font-size: 34px;
+      }
+      .main-priceList-shop-item-decr {
+        margin-top: 20px;
+        width: 80%;
+        font-size: 18px;
+        line-height: 30px;
+      }
+    }
+  }
+}
+
+/* Конец прайс-листа */
+
+#main-map {
+  position: relative;
+  height: 600px;
+  background-color: $bg-color;
+  h2 {
+    position: relative;
+    padding-top: $pad-top;
+    width: 100%;
+    font-size: 44px;
+    font-family: $Montserrat;
+    text-align: center;
+    color: white;
+  }
 }
 
 @media (max-width: 500px){
@@ -185,14 +275,14 @@ header {
   }
 
   #header-block-data{
-    h2 {
-      flex-basis: 70%;
-      font-size: 24px; 
+    img {
+      width: 70%;
+      height: 100px;
     }
 
     i {
       display: block;
-      font-size: 26px;
+      font-size: 32px;
       color: $white;
       cursor: $pointer;
       transition: $transition;
@@ -202,10 +292,16 @@ header {
       transform: $scale;
     }
 
-    p {
+    div {
       flex-basis: 88%;
       text-align: center;
       font-size: 12px;
+      p {
+        margin-top: -20px;
+      }
+      p:last-child {
+        margin-left: 10px;
+      }
     }
   }
   #hamburger-menu {
@@ -217,9 +313,8 @@ header {
 
     i {
       position: fixed;
-      display: none;
       top: 10px;
-      right: 10px;
+      right: -20px;
       font-size: 22px;
       color: $white;
       z-index: 11;
@@ -255,7 +350,7 @@ header {
   }
 
   .open {
-    right: 90px;
+    right: 100px;
   }
 
   .closed {
@@ -264,7 +359,7 @@ header {
 
   #main-about {
     position: relative;
-    height: 900px;
+    height: 1250px;
     overflow: hidden;
     div {
       display: flex;
@@ -285,20 +380,21 @@ header {
     }
     h3 {
       height: 50px;
-      margin-top: 0px;
+      margin-top: -450px;
       font-size: 32px;
     }
     span {
+      position: relative;
+      flex-wrap: $flexWrap;
       width: 100%;
       height: 600px;
-      margin-top: -50px;
+      margin-top: -225px;
       .icon-block {  
-        display: $flex;
-        flex-direction: row;
         flex-wrap: $flexWrap;
         align-items: center;
+        margin-top: -50px;
         width: 100%;
-        height: 200px;
+        height: 310px;
         .icon-image {
           position: relative;
           align-self: center;
