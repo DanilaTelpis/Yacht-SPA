@@ -81,13 +81,22 @@
     </section>
     <section id="main-map">
       <h2>Как до нас добраться:</h2>
+      <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/213/moscow/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Москва</a><a href="https://yandex.ru/maps/1/moscow-and-moscow-oblast/house/derevnya_sorokino_26/Z04YcAJmSEYAQFtvfXV5dHRhYg==/?ll=37.655533%2C55.985709&utm_medium=mapframe&utm_source=maps&z=18.17" style="color:#eee;font-size:12px;position:absolute;top:14px;">Деревня Сорокино, 26 — Яндекс Карты</a><iframe src="https://yandex.ru/map-widget/v1/-/CCUVFFbydB" width="860" height="600" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
     </section>
     <section id="main-form">
-
+      <div id="main-form-background-image"></div>
+      <h2>Форма для связи с нами:</h2>
+      <form type="submit" id="main-form-submit" action="processing.php" method="POST">
+        <input type="email" name="Email" id="main-formEmail" placeholder="Укажите ваш email" required>
+        <input type="text" name="Theme" id="main-formTheme" placeholder="Укажите тему сообщения" required>
+        <textarea name="MessText" id="main-formMess" placeholder="Напишите свое сообщение" required></textarea>
+        <button type="submit" form="main-form-submit" formaction="processing.php" formmethod="POST" >Отправить сообщение</button>
+      </form>
     </section>
   </main>
   <footer>
-
+    <p id="footer-creators">Создатели сайта: RoastedPikachu и @DanilaTelpis</p>
+    <p id="footer-data">2022г. Москва</p>
   </footer>
   <script src="scripts/script.js"></script>
 </body>

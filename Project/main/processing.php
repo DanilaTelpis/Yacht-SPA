@@ -35,10 +35,6 @@
     $_SESSION['sender_email_err'] = 'error';
     redir();
   }
-  else if(strlen(trim($recipient))<5 or trim($recipient) == ''){
-    $_SESSION['rec_email_err'] = 'error';
-    redir();
-  }
   else if(strlen($theme)<3 or strlen($theme)>60){
     if(strlen($theme)<3){
       $_SESSION['theme_err'] = 'it is too small';
@@ -59,3 +55,5 @@
     mail($recipient, $theme, $mess, $headers);
     redir();
   }
+
+?>

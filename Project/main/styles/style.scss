@@ -22,6 +22,7 @@ header {
   display: block;
   min-width: $width;
   height: 770px;
+
   h1 {
     position: $relative;
     display: $flex;
@@ -119,8 +120,10 @@ header {
   background-color:$bg-color;
   font-family: $Montserrat;
   color: $white;
+
   div {
     height: 300px;
+
     h2 {
       position: relative;
       text-align: center;
@@ -129,6 +132,7 @@ header {
       height: 100px;
       font-size: 44px;
     }
+
     p {
       position: relative;
       align-self: flex-start;
@@ -138,6 +142,7 @@ header {
       font-size: 20px;
     }
   }
+
   h3 {
     position: relative;
     align-self: center;
@@ -147,12 +152,14 @@ header {
     font-size: 40px;
     text-align: center;
   }
+
   span {
     position: relative;
     display: $flex;
     justify-content: space-between;
     height: 350px;
     width: 80vw;
+
     .icon-block {
       display: $flex;
       flex-direction: column;
@@ -160,12 +167,14 @@ header {
       align-items: center;
       width: 250px;
       height: 350px;
+
       .icon-image {
         width: 150px;
         height: 150px;
         background-color: #4f4f4f;
         border-radius: 100px;
       }
+
       .icon-text {
         width: 100%;
         margin-top: 25px;
@@ -182,6 +191,7 @@ header {
   flex-direction: column;
   align-items: center;
   height: 700px;
+
   #main-priceList-background-image {
     position: $absolute;
     width: $width;
@@ -192,6 +202,7 @@ header {
     background-blend-mode: multiply;
     background-color: #4f4f4f;
   }
+
   h2 {
     position: relative;
     padding-top: $pad-top;
@@ -202,6 +213,7 @@ header {
     text-align: center;
     color: $white;
   }
+
   #main-priceList-shop-items {
     position: relative;
     display: flex;
@@ -210,6 +222,7 @@ header {
     margin-top: 50px;
     width: 80%;
     height: 400px;
+
     .main-priceList-shop-item {
       display: flex;
       flex-direction: column;
@@ -219,7 +232,8 @@ header {
       font-family: $Montserrat;
       text-align: center;
       background-color: $bg-color;
-      color: white;
+      color: $white;
+
       h3 {
         padding-top: 20px;
         width: 100%;
@@ -227,10 +241,12 @@ header {
         font-size: 22px;
         background-color: #4f4f4f;
       }
+
       .main-priceList-shop-item-price {
         margin-top: 20px;
         font-size: 34px;
       }
+
       .main-priceList-shop-item-decr {
         margin-top: 20px;
         width: 80%;
@@ -245,8 +261,12 @@ header {
 
 #main-map {
   position: relative;
-  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 850px;
   background-color: $bg-color;
+
   h2 {
     position: relative;
     padding-top: $pad-top;
@@ -254,7 +274,129 @@ header {
     font-size: 44px;
     font-family: $Montserrat;
     text-align: center;
-    color: white;
+    color: $white;
+  }
+
+  div {
+    margin-top: 50px;
+  }
+}
+
+/* Конец раздела "Как добраться" */
+
+#main-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 750px;
+
+  #main-form-background-image {
+    position: $absolute;
+    width: $width;
+    height: 100%;
+    background-image: url('https://welcome.mosreg.ru/cache/thumbs/thumb_1060_440_2148990168.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-blend-mode: multiply;
+    background-color: #4f4f4f;
+  }
+
+  h2 {
+    position: relative;
+    padding-top: $pad-top;
+    width: 100%;
+    height: 75px;
+    font-size: 44px;
+    font-family: $Montserrat;
+    text-align: center;
+    color: $white;
+    z-index: 1;
+  }
+
+  form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: $pad-top;
+    width: 55%;
+
+    #main-formEmail {
+      padding-left: 15px;
+      width: 97%;
+      height: 50px;
+      border-radius: 10px;
+      border: 5px solid rgb(31, 31, 31);
+      font-size: 22px;
+      font-family: $MontserratAlt;
+    }
+
+    #main-formTheme {
+      margin-top: 10px;
+      padding-left: 15px;
+      width: 97%;
+      height: 50px;
+      border-radius: 10px;
+      border: 5px solid rgb(31, 31, 31);
+      font-size: 22px;
+      font-family: $MontserratAlt;
+    }
+
+    #main-formMess {
+      margin-top: 15px;
+      padding-top: 10px;
+      padding-left: 15px;
+      padding-right: 15px;
+      width: 96%;
+      height: 150px;
+      border-radius: 10px;
+      border: 5px solid rgb(31, 31, 31);
+      font-size: 22px;
+      font-family: $MontserratAlt;
+      background-color: white;
+      resize: none;
+    }
+
+    button {
+      position: relative;
+      align-self: flex-end;
+      margin-top: 25px;
+      padding-right: 5px;
+      width: 200px;
+      height: 60px;
+      border-radius: 15px;
+      border: 3px solid white;
+      font-size: 18px;
+      font-family: $Montserrat;
+      color: $white;
+      background-color: rgb(31, 31, 31);
+      cursor: pointer;
+      transition: $transition;
+    }
+    button:hover {
+      transform: $scale;
+      background-color: rgb(52, 52, 52);
+    }
+  }
+}
+
+/* Конец блока обратной связи */
+
+footer {
+  position: relative;
+  padding-top: $pad-top;
+  height: 100px;
+  background-color: $bg-color;
+  font-family: $Montserrat;
+  font-size: 18px;
+  text-align: center;
+  color: $white;
+
+  p:last-child {
+    padding-top: 20px;
   }
 }
 
