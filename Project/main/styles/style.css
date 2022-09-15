@@ -84,7 +84,7 @@ header h1 {
 .header-block-data-menu {
   display: flex;
   justify-content: space-between;
-  flex-basis: 40%;
+  flex-basis: 30%;
   font-size: 18px;
 }
 .header-block-data-menu a {
@@ -110,7 +110,7 @@ header h1 {
   justify-content: center;
   flex-wrap: wrap;
   width: 100%;
-  height: 900px;
+  height: 700px;
   background-color: rgb(31, 31, 31);
   font-family: "Montserrat", sans-serif;
   color: white;
@@ -137,7 +137,7 @@ header h1 {
 #main-about h3 {
   position: relative;
   align-self: center;
-  margin-top: -50px;
+  margin-top: 0px;
   flex-basis: 100vw;
   height: 100px;
   font-size: 40px;
@@ -158,84 +158,13 @@ header h1 {
   width: 250px;
   height: 350px;
 }
-#main-about span .icon-block .icon-image {
-  width: 150px;
-  height: 150px;
-  background-color: #4f4f4f;
-  border-radius: 100px;
-}
 #main-about span .icon-block .icon-text {
   width: 100%;
   margin-top: 25px;
-  font-size: 16px;
+  font-size: 24px;
 }
 
 /* Конец блока 'О нас' */
-#main-priceList {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 700px;
-}
-#main-priceList #main-priceList-background-image {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-image: url("https://itboat.com/uploads/15da/387d8c302c67.jpg");
-  background-size: cover;
-  background-attachment: fixed;
-  background-blend-mode: multiply;
-  background-color: #4f4f4f;
-}
-#main-priceList h2 {
-  position: relative;
-  padding-top: 50px;
-  width: 100%;
-  height: 100px;
-  font-size: 44px;
-  font-family: "Montserrat", sans-serif;
-  text-align: center;
-  color: white;
-}
-#main-priceList #main-priceList-shop-items {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 50px;
-  width: 80%;
-  height: 400px;
-}
-#main-priceList #main-priceList-shop-items .main-priceList-shop-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 300px;
-  height: 400px;
-  font-family: "Montserrat", sans-serif;
-  text-align: center;
-  background-color: rgb(31, 31, 31);
-  color: white;
-}
-#main-priceList #main-priceList-shop-items .main-priceList-shop-item h3 {
-  padding-top: 20px;
-  width: 100%;
-  height: 40px;
-  font-size: 22px;
-  background-color: #4f4f4f;
-}
-#main-priceList #main-priceList-shop-items .main-priceList-shop-item .main-priceList-shop-item-price {
-  margin-top: 20px;
-  font-size: 34px;
-}
-#main-priceList #main-priceList-shop-items .main-priceList-shop-item .main-priceList-shop-item-decr {
-  margin-top: 20px;
-  width: 80%;
-  font-size: 18px;
-  line-height: 30px;
-}
-
-/* Конец прайс-листа */
 #main-map {
   position: relative;
   display: flex;
@@ -448,6 +377,7 @@ footer p:last-child {
   .closed {
     right: -100px;
   }
+  /* Конец headerа */
   #main-about {
     position: relative;
     height: 1250px;
@@ -472,7 +402,7 @@ footer p:last-child {
   }
   #main-about h3 {
     height: 50px;
-    margin-top: -450px;
+    margin-top: -100px;
     font-size: 32px;
   }
   #main-about span {
@@ -480,7 +410,7 @@ footer p:last-child {
     flex-wrap: wrap;
     width: 100%;
     height: 600px;
-    margin-top: -225px;
+    margin-top: 50px;
   }
   #main-about span .icon-block {
     flex-wrap: wrap;
@@ -501,7 +431,50 @@ footer p:last-child {
     width: 200px;
     height: 100px;
     margin-top: 25px;
-    font-size: 10px;
+    font-size: 18px;
+  }
+  /* Конец блока 'О нас' */
+  #main-map {
+    height: 600px;
+  }
+  #main-map h2 {
+    font-size: 32px;
+  }
+  #main-map div {
+    width: 280px;
+    height: 300px;
+  }
+  /* Конец раздела "Как добраться" */
+  #main-form {
+    height: 650px;
+  }
+  #main-form h2 {
+    width: 80%;
+    font-size: 32px;
+  }
+  #main-form #main-form-submit {
+    width: 75%;
+    margin-top: 50px;
+  }
+  #main-form #main-form-submit #main-formEmail {
+    padding-left: 5px;
+    font-size: 16px;
+  }
+  #main-form #main-form-submit #main-formTheme {
+    padding-left: 5px;
+    font-size: 16px;
+  }
+  #main-form #main-form-submit #main-formMess {
+    width: 93%;
+    padding-left: 5px;
+    font-size: 16px;
+  }
+  #main-form #main-form-submit button {
+    align-self: center;
+  }
+  /* Конец блока обратной связи */
+  footer {
+    height: 150px;
   }
 }
 
