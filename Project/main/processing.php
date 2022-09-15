@@ -43,8 +43,8 @@
     $theme = 'Заявка';
     $theme = '=utf-8?B?' . $theme . '?=';
 
-    $mess = "Здравсвуйте, меня зовут " + $fio + ". Я хотел бы связаться с вами. Мои контактные данные:\nНомер телефона: " 
-    $mess += $phone_num + "\nМоя электронная почта: " + $sender
+    $mess = "Здравсвуйте, меня зовут " + $fio + ". Я хотел бы связаться с вами. Мои контактные данные:\nНомер телефона: "; 
+    $mess += $phone_num + "\nМоя электронная почта: " + $sender;
 
 
     $headers = "From: $sender\r\nReaply-to: $sender\r\nContent-type:text/plain; charset=utf-8\r\n";
