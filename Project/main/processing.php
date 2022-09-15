@@ -6,52 +6,49 @@
     exit();
   }
 //снос сессий
-  unset($_SESSION['']);
-  unset($_SESSION['']);
-  unset($_SESSION['']);
-  unset($_SESSION['']);
+  unset($_SESSION['sender']);
+  unset($_SESSION['phone_num']);
+  unset($_SESSION['fio']);
 
-  unset($_SESSION['']);
+  unset($_SESSION['success']);
 
-  unset($_SESSION['']);
-  unset($_SESSION['']);
-  unset($_SESSION['']);
-  unset($_SESSION['']);
+  unset($_SESSION['sender_email_err']);
+  unset($_SESSION['phone_num_err']);
+ 
 
 //удаление спец символов
   $sender = htmlspecialchars(trim($_POST['sender']));
-  $recipient = htmlspecialchars(trim($_POST['recipient']));
-  $theme = htmlspecialchars(trim($_POST['theme']));
-  $mess = htmlspecialchars(trim($_POST['mess']));
+  $phone_num = htmlspecialchars(trim($_POST['phone_num']));
+  $fio = htmlspecialchars(trim($_POST['fio']));
 
 //создание сессий
   $_SESSION['sender'] = $sender;
-  $_SESSION['recipient'] = $recipient;
-  $_SESSION['theme'] = $theme;
-  $_SESSION['mess'] = $mess;
+  $_SESSION['phone_num'] = $phone_num;
+  $_SESSION['fio'] = $fio;
   
 //проверки адекватности данных и отправление в сучае удачи
   if(strlen(trim($sender))<5 or trim($sender) == ''){
     $_SESSION['sender_email_err'] = 'error';
     redir();
   }
-  else if(strlen($theme)<3 or strlen($theme)>60){
-    if(strlen($theme)<3){
-      $_SESSION['theme_err'] = 'it is too small';
-    }
-    else if(strlen($theme)>60){
-      $_SESSION['theme_err'] = 'it is too big';
-    }
-    redir();
-  }
-  else if(strlen($mess)<15){
-    $_SESSION['mess_err'] = 'error';
+  else if(strlen(trim($phone_num))<11 or strlen(trim($phone_num)>18)){
+    $_SESSION['phone_num_err'] = 'error';
     redir();
   }
   else{
-    $_SESSION['success'] = 'your message was sended';
+    $_SESSION['success'] = 'Cпасибо за вашу заявку!';
+
+    $recipient = 'katranibiza@gmail.com';
+
+    $theme = 'Заявка';
     $theme = '=utf-8?B?' . $theme . '?=';
+
+    $mess = "Здравсвуйте, меня зовут " + $fio + ". Я хотел бы связаться с вами. Мои контактные данные:\nНомер телефона: " 
+    $mess += $phone_num + "\nМоя электронная почта: " + $sender
+
+
     $headers = "From: $sender\r\nReaply-to: $sender\r\nContent-type:text/plain; charset=utf-8\r\n";
+
     mail($recipient, $theme, $mess, $headers);
     redir();
   }
