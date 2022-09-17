@@ -1,0 +1,634 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Montserrat+Alternates&family=Montserrat:wght@600;700&display=swap");
+.header-block-data-menu {
+  font-family: "Lato", sans-serif;
+  color: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+body {
+  width: 100%;
+}
+
+header {
+  position: relative;
+  display: block;
+  min-width: 100%;
+  height: 770px;
+}
+header h1 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0px;
+  height: 80%;
+  font-size: 50px;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+}
+
+#header-block {
+  position: absolute;
+  width: 100%;
+  height: 795px;
+  background-image: url("/Users/boris/Documents/Проекты/About-SPA/Project/main/images/pic2.jpeg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-blend-mode: multiply;
+  background-color: #4f4f4f;
+}
+
+#header-block-data {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  flex-basis: 100%;
+  height: 125px;
+  background-color: rgb(31, 31, 31);
+  font-family: "Montserrat Alternates", sans-serif;
+  z-index: 10;
+}
+#header-block-data img {
+  align-self: flex-start;
+  flex-basis: 25%;
+  width: 300px;
+  height: 125px;
+  background-size: contain;
+}
+#header-block-data i {
+  display: none;
+}
+#header-block-data div {
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 11%;
+  font-size: 18px;
+  font-family: "Lato", sans-serif;
+  color: white;
+}
+
+.header-block-data-menu {
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 30%;
+  font-size: 18px;
+}
+.header-block-data-menu a {
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+.header-block-data-menu a:hover {
+  transform: scale(1.05);
+}
+
+.header-block-data-menu-1 {
+  display: none;
+}
+
+#hamburger-menu i {
+  display: block;
+  transition: 0.4s ease;
+}
+
+/* Конец headerа */
+#main-about {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 700px;
+  background-color: rgb(31, 31, 31);
+  font-family: "Montserrat", sans-serif;
+  color: white;
+}
+#main-about div {
+  height: 320px;
+}
+#main-about div h2 {
+  position: relative;
+  margin-top: 50px;
+  flex-basis: 100vw;
+  height: 100px;
+  font-size: 40px;
+  text-align: center;
+}
+#main-about div p {
+  position: relative;
+  align-self: flex-start;
+  width: 80vw;
+  height: 150px;
+  font-size: 20px;
+  text-align: center;
+}
+#main-about h3 {
+  position: relative;
+  align-self: center;
+  flex-basis: 100vw;
+  height: 100px;
+  font-size: 40px;
+  text-align: center;
+}
+#main-about span {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 80vw;
+  height: 350px;
+}
+#main-about span .icon-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 350px;
+}
+#main-about span .icon-block .icon-text {
+  margin-top: 25px;
+  width: 100%;
+  font-size: 24px;
+}
+
+/* Конец блока 'О нас' */
+#main-map {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -1px;
+  height: 850px;
+  background-color: rgb(31, 31, 31);
+}
+#main-map h2 {
+  position: relative;
+  padding-top: 50px;
+  width: 100%;
+  font-size: 40px;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  color: white;
+}
+#main-map div {
+  margin-top: 50px;
+}
+
+/* Конец раздела "Как добраться" */
+#main-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 750px;
+}
+#main-form #main-form-background-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("/Users/boris/Documents/Проекты/About-SPA/Project/main/images/pic1.jpeg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-blend-mode: multiply;
+  background-color: #4f4f4f;
+}
+#main-form h2 {
+  position: relative;
+  padding-top: 50px;
+  width: 100%;
+  height: 150px;
+  font-size: 44px;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  color: white;
+  z-index: 1;
+}
+#main-form form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  width: 55%;
+}
+#main-form form #main-formEmail {
+  padding-left: 15px;
+  width: 97%;
+  height: 50px;
+  border-radius: 10px;
+  border: 5px solid rgb(31, 31, 31);
+  font-size: 22px;
+  font-family: "Montserrat Alternates", sans-serif;
+}
+#main-form form #main-formTheme {
+  margin-top: 10px;
+  padding-left: 15px;
+  width: 97%;
+  height: 50px;
+  border-radius: 10px;
+  border: 5px solid rgb(31, 31, 31);
+  font-size: 22px;
+  font-family: "Montserrat Alternates", sans-serif;
+}
+#main-form form #main-formMess {
+  margin-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 96%;
+  height: 50px;
+  border-radius: 10px;
+  border: 5px solid rgb(31, 31, 31);
+  font-size: 22px;
+  font-family: "Montserrat Alternates", sans-serif;
+  background-color: white;
+  resize: none;
+}
+#main-form form button {
+  position: relative;
+  align-self: flex-end;
+  margin-top: 25px;
+  padding-right: 5px;
+  width: 200px;
+  height: 60px;
+  border-radius: 15px;
+  border: 3px solid white;
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  background-color: rgb(31, 31, 31);
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+#main-form form button:hover {
+  transform: scale(1.05);
+  background-color: rgb(52, 52, 52);
+}
+
+/* Конец блока обратной связи */
+footer {
+  position: relative;
+  padding-top: 50px;
+  height: 100px;
+  background-color: rgb(31, 31, 31);
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  text-align: center;
+  color: white;
+}
+footer p:last-child {
+  padding-top: 20px;
+}
+
+@media (max-width: 500px) {
+  header {
+    height: 600px;
+  }
+  header h1 {
+    width: 99%;
+    height: 60%;
+    font-size: 28px;
+    text-align: center;
+  }
+  .header-block-data-menu {
+    display: none;
+  }
+  #header-block-data img {
+    width: 70%;
+    height: 100px;
+  }
+  #header-block-data i {
+    display: block;
+    font-size: 32px;
+    color: white;
+    cursor: pointer;
+    transition: 0.4s ease;
+  }
+  #header-block-data i:hover {
+    transform: scale(1.05);
+  }
+  #header-block-data div {
+    flex-basis: 80%;
+    text-align: center;
+    font-size: 12px;
+  }
+  #header-block-data div p {
+    margin-top: -20px;
+  }
+  #header-block-data div p:last-child {
+    margin-left: 10px;
+  }
+  #hamburger-menu {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: 0.4s ease;
+    z-index: 11;
+  }
+  #hamburger-menu i {
+    position: fixed;
+    top: 10px;
+    right: -20px;
+    font-size: 22px;
+    color: white;
+    z-index: 11;
+  }
+  .header-block-data-menu-1 {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 40px;
+    width: 100px;
+    height: 100%;
+    font-size: 14px;
+    font-family: "Lato", sans-serif;
+    color: white;
+    background-color: rgb(31, 31, 31);
+  }
+  .header-block-data-menu-1 a {
+    margin-left: auto;
+    margin-right: auto;
+    width: 75px;
+    height: 60px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.4s ease;
+  }
+  .header-block-data-menu-1 a:hover {
+    transform: scale(1.05);
+  }
+  .open {
+    right: 100px;
+  }
+  .closed {
+    right: -100px;
+  }
+  /* Конец headerа */
+  #main-about {
+    position: relative;
+    height: 1300px;
+    overflow: hidden;
+  }
+  #main-about div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50px;
+    height: 250px;
+  }
+  #main-about div h2 {
+    margin-top: 0;
+    height: 50px;
+    font-size: 32px;
+  }
+  #main-about div p {
+    margin-top: 25px;
+    width: 80%;
+    font-size: 14px;
+  }
+  #main-about h3 {
+    margin-top: -50px;
+    height: 50px;
+    font-size: 32px;
+  }
+  #main-about span {
+    position: relative;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 50px;
+    height: 600px;
+  }
+  #main-about span .icon-block {
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: -50px;
+    width: 100%;
+    height: 310px;
+  }
+  #main-about span .icon-block .icon-image {
+    position: relative;
+    align-self: center;
+    width: 125px;
+    height: 125px;
+  }
+  #main-about span .icon-block .icon-text {
+    position: relative;
+    align-self: center;
+    margin-top: 25px;
+    width: 200px;
+    height: 100px;
+    font-size: 18px;
+  }
+  /* Конец блока 'О нас' */
+  #main-map {
+    position: relative;
+    width: 100%;
+    height: 600px;
+  }
+  #main-map h2 {
+    font-size: 32px;
+  }
+  #main-map div {
+    width: 280px;
+    height: 300px;
+  }
+  #main-map div iframe {
+    width: 100%;
+    height: 100%;
+  }
+  /* Конец раздела "Как добраться" */
+  #main-form {
+    height: 650px;
+  }
+  #main-form h2 {
+    width: 80%;
+    font-size: 32px;
+  }
+  #main-form #main-form-submit {
+    width: 75%;
+    margin-top: 50px;
+  }
+  #main-form #main-form-submit #main-formEmail {
+    padding-left: 5px;
+    font-size: 16px;
+  }
+  #main-form #main-form-submit #main-formTheme {
+    padding-left: 5px;
+    font-size: 16px;
+  }
+  #main-form #main-form-submit #main-formMess {
+    width: 93%;
+    padding-left: 5px;
+    font-size: 16px;
+  }
+  #main-form #main-form-submit button {
+    align-self: center;
+  }
+  /* Конец блока обратной связи */
+  footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 125px;
+  }
+  footer #footer-creators {
+    margin-top: -50px;
+    width: 90%;
+  }
+  footer #footer-data {
+    margin-top: -50px;
+  }
+}
+@media (min-width: 1800px) {
+  header {
+    height: 1250px;
+  }
+  header h1 {
+    font-size: 68px;
+  }
+  header #header-block {
+    height: 100%;
+  }
+  header #header-block-data {
+    height: 200px;
+  }
+  header #header-block-data img {
+    height: 200px;
+  }
+  header #header-block-data span {
+    font-size: 32px;
+  }
+  header #header-block-data div {
+    font-size: 32px;
+  }
+  #main-about {
+    margin-top: -30px;
+    height: 1000px;
+  }
+  #main-about div h2 {
+    font-size: 52px;
+  }
+  #main-about div p {
+    font-size: 28px;
+  }
+  #main-about h3 {
+    margin-top: -150px;
+    font-size: 52px;
+  }
+  #main-about span .icon-block {
+    width: 400px;
+    height: 450px;
+  }
+  #main-about span .icon-block svg {
+    width: 300px;
+    height: 300px;
+  }
+  #main-about span .icon-block .icon-text {
+    font-size: 36px;
+  }
+  #main-map {
+    height: 1000px;
+  }
+  #main-map h2 {
+    font-size: 52px;
+  }
+  #main-map div {
+    margin-top: 100px;
+    width: 1000px;
+    height: 700px;
+  }
+  #main-map div iframe {
+    width: 100%;
+    height: 100%;
+  }
+  #main-form h2 {
+    font-size: 52px;
+  }
+  #main-form #main-form-submit {
+    width: 60%;
+  }
+  #main-form #main-form-submit #main-formEmail {
+    width: 99%;
+    height: 75px;
+    font-size: 32px;
+  }
+  #main-form #main-form-submit #main-formTheme {
+    width: 99%;
+    height: 75px;
+    font-size: 32px;
+  }
+  #main-form #main-form-submit #main-formMess {
+    width: 98%;
+    height: 75px;
+    font-size: 32px;
+  }
+  #main-form #main-form-submit button {
+    width: 200px;
+    height: 100px;
+    font-size: 28px;
+  }
+}
+@media (min-width: 650px) and (max-width: 1100px) {
+  header h1 {
+    font-size: 36px;
+  }
+  #header-block-data {
+    height: 150px;
+  }
+  #header-block-data div {
+    flex-basis: 87.5%;
+    text-align: center;
+    font-size: 14px;
+  }
+  #header-block-data div p {
+    margin-top: -20px;
+  }
+  #header-block-data div p:last-child {
+    margin-left: 10px;
+  }
+  .header-block-data-menu {
+    flex-basis: 50%;
+    font-size: 18px;
+    text-align: center;
+  }
+  /* Конец headerа */
+  #main-about {
+    height: 900px;
+  }
+  #main-about h3 {
+    margin-top: 150px;
+  }
+  /* Конец блока 'О нас' */
+  #main-map div {
+    width: 600px;
+    height: 600px;
+  }
+  #main-map div iframe {
+    width: 100%;
+    height: 100%;
+  }
+  /* Конец блока "Как добраться */
+  #main-form form {
+    width: 80%;
+  }
+  #main-form form #main-formMess {
+    width: 94%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,745 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat+Alternates&family=Montserrat:wght@600;700&display=swap');
+@import 'variables';
+@import 'extends';
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: $text-color;
+}
+
+body {
+  width: $width;
+}
+
+header {
+  position: relative;
+  display: block;
+  min-width: $width;
+  height: 770px;
+
+  h1 {
+    position: $relative;
+    display: $flex;
+    justify-content: $justify-center;
+    align-items: center;
+    top: 0px;
+    height: 80%;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: $Montserrat;
+    color: $text-color;
+  }
+} 
+
+#header-block {
+  position: $absolute;
+  width: $width;
+  height: 795px;
+  background-image: url('/Users/boris/Documents/Проекты/About-SPA/Project/main/images/pic2.jpeg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-blend-mode: multiply;
+  background-color: #4f4f4f;
+}
+
+#header-block-data {
+  position: $relative;
+  display: $flex;
+  flex-wrap: $flexWrap;
+  justify-content: space-around;
+  align-items: center;  
+  flex-basis: $width;
+  height: 125px;
+  background-color: $bg-color;
+  font-family: $MontserratAlt;
+  z-index: 10;
+
+  img {
+    align-self: flex-start;
+    flex-basis: 25%;
+    width: 300px;
+    height: 125px;
+    background-size: contain;
+  }
+
+  i {
+    display: none;
+  }
+
+  div {
+    display: $flex;
+    flex-wrap: wrap;
+    flex-basis: 11%;
+    font-size: $laptop-header-font;
+    font-family: $Lato;
+    color: $text-color;
+  }
+}
+
+.header-block-data-menu {
+  display: $flex;
+  justify-content: space-between;
+  flex-basis: 30%;
+  font-size: $laptop-header-font;
+  @extend %menu-text;
+
+  a {
+    cursor: $pointer;
+    transition: $transition;
+  }
+  a:hover {
+    transform: $scale;
+  }
+}
+
+.header-block-data-menu-1 {
+  display: none;
+}
+
+#hamburger-menu {
+  i {
+    display: block;
+    transition: $transition;
+  }
+}
+
+/* Конец headerа */
+
+#main-about {
+  display: $flex;
+  justify-content: $justify-center;
+  flex-wrap: wrap;
+  width: $width;
+  height: 700px;
+  background-color:$bg-color;
+  font-family: $Montserrat;
+  color: $text-color;
+
+  div {
+    height: 320px;
+
+    h2 {
+      position: relative;
+      margin-top: $pad-top;
+      flex-basis: 100vw;
+      height: 100px;
+      font-size: $laptop-h2-font;
+      text-align: $text-center;
+    }
+
+    p {
+      position: relative;
+      align-self: flex-start;
+      width: 80vw;
+      height: 150px;
+      font-size: 20px;
+      text-align: $text-center;
+    }
+  }
+
+  h3 {
+    position: relative;
+    align-self: center;
+    flex-basis: 100vw;
+    height: 100px;
+    font-size: $laptop-h2-font;
+    text-align: $text-center;
+  }
+
+  span {
+    position: relative;
+    display: $flex;
+    justify-content: space-between;
+    width: 80vw;
+    height: 350px;
+
+    .icon-block {
+      display: $flex;
+      flex-direction: column;
+      justify-content: $justify-center;
+      align-items: center;
+      width: 250px;
+      height: 350px;
+
+      .icon-text {
+        margin-top: 25px;
+        width: 100%;
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+/* Конец блока 'О нас' */
+
+#main-map {
+  position: relative;
+  display: $flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -1px;
+  height: 850px;
+  background-color: $bg-color;
+
+  h2 {
+    position: relative;
+    padding-top: $pad-top;
+    width: 100%;
+    font-size: $laptop-h2-font;
+    font-family: $Montserrat;
+    text-align: $text-center;
+    color: $text-color;
+  }
+
+  div {
+    margin-top: 50px;
+  }
+}
+
+/* Конец раздела "Как добраться" */
+
+#main-form {
+  display: $flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: $width;
+  height: 750px;
+
+  #main-form-background-image {
+    position: $absolute;
+    width: $width;
+    height: 100%;
+    background-image: url('/Users/boris/Documents/Проекты/About-SPA/Project/main/images/pic1.jpeg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-blend-mode: multiply;
+    background-color: #4f4f4f;
+  }
+
+  h2 {
+    position: relative;
+    padding-top: $pad-top;
+    width: $width;
+    height: 150px;
+    font-size: 44px;
+    font-family: $Montserrat;
+    text-align: $text-center;
+    color: $text-color;
+    z-index: 1;
+  }
+
+  form {
+    position: relative;
+    display: $flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: $pad-top;
+    width: 55%;
+
+    #main-formEmail {
+      padding-left: 15px;
+      width: 97%;
+      height: 50px;
+      border-radius: 10px;
+      border: 5px solid $bg-color;
+      font-size: $laptop-form-font;
+      font-family: $MontserratAlt;
+    }
+
+    #main-formTheme {
+      margin-top: 10px;
+      padding-left: 15px;
+      width: 97%;
+      height: 50px;
+      border-radius: 10px;
+      border: 5px solid $bg-color;
+      font-size: $laptop-form-font;
+      font-family: $MontserratAlt;
+    }
+
+    #main-formMess {
+      margin-top: 15px;
+      padding-left: 15px;
+      padding-right: 15px;
+      width: 96%;
+      height: 50px;
+      border-radius: 10px;
+      border: 5px solid $bg-color;
+      font-size: $laptop-form-font;
+      font-family: $MontserratAlt;
+      background-color: $text-color;
+      resize: none;
+    }
+
+    button {
+      position: relative;
+      align-self: flex-end;
+      margin-top: 25px;
+      padding-right: 5px;
+      width: 200px;
+      height: 60px;
+      border-radius: 15px;
+      border: 3px solid $text-color;
+      font-size: 18px;
+      font-family: $Montserrat;
+      color: $text-color;
+      background-color: $bg-color;
+      cursor: pointer;
+      transition: $transition;
+    }
+    button:hover {
+      transform: $scale;
+      background-color: rgb(52, 52, 52);
+    }
+  }
+}
+
+/* Конец блока обратной связи */
+
+footer {
+  position: relative;
+  padding-top: $pad-top;
+  height: 100px;
+  background-color: $bg-color;
+  font-family: $Montserrat;
+  font-size: 18px;
+  text-align: $text-center;
+  color: $text-color;
+
+  p:last-child {
+    padding-top: 20px;
+  }
+}
+
+@media (max-width: 500px){
+
+  header {
+    height: 600px;
+  }
+
+  header h1 {
+    width: 99%;
+    height: 60%;
+    font-size: 28px;
+    text-align: $text-center;
+  } 
+
+  .header-block-data-menu {
+    display: none;
+  }
+
+  #header-block-data{
+    img {
+      width: 70%;
+      height: 100px;
+    }
+
+    i {
+      display: block;
+      font-size: 32px;
+      color: $text-color;
+      cursor: $pointer;
+      transition: $transition;
+    }
+
+    i:hover {
+      transform: $scale;
+    }
+
+    div {
+      flex-basis: 80%;
+      text-align: center;
+      font-size: 12px;
+      p {
+        margin-top: -20px;
+      }
+      p:last-child {
+        margin-left: 10px;
+      }
+    }
+  }
+  #hamburger-menu {
+    position: $absolute; 
+    top: 0;
+    height: 100%;
+    transition: $transition;
+    z-index: 11;
+
+    i {
+      position: fixed;
+      top: 10px;
+      right: -20px;
+      font-size: 22px;
+      color: $text-color;
+      z-index: 11;
+    }
+  }
+
+  .header-block-data-menu-1 {
+    position: fixed;
+    display: $flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 40px;
+    width: 100px;
+    height: 100%;
+    font-size: 14px;
+    font-family: $Lato;
+    color: $text-color;
+    background-color: $bg-color;
+
+    a {
+      margin-left: auto;
+      margin-right: auto;
+      width: 75px;
+      height: 60px;
+      text-align: $text-center;
+      cursor: $pointer;
+      transition: $transition;
+    }
+
+    a:hover {
+      transform: $scale;
+    }
+  }
+
+  .open {
+    right: 100px;
+  }
+
+  .closed {
+    right: -100px;
+  }
+
+  /* Конец headerа */
+
+  #main-about {
+    position: relative;
+    height: 1300px;
+    overflow: hidden;
+    div {
+      display: $flex;
+      flex-wrap: wrap;
+      justify-content: $justify-center;
+      margin-top: 50px;
+      height: 250px;
+      h2 {
+        margin-top: 0;
+        height: 50px;
+        font-size: $mobile-h2-font;
+      }
+      p {
+        margin-top: 25px;
+        width: 80%;
+        font-size: 14px;
+      }
+    }
+    h3 {
+      margin-top: -50px;
+      height: 50px;
+      font-size: $mobile-h2-font;
+    }
+    span {
+      position: relative;
+      flex-wrap: wrap;
+      width: $width;
+      margin-top: 50px;
+      height: 600px;
+      .icon-block {  
+        flex-wrap: wrap;
+        align-items: center;
+        margin-top: -50px;
+        width: 100%;
+        height: 310px;
+        .icon-image {
+          position: relative;
+          align-self: center;
+          width: 125px;
+          height: 125px;
+        }
+        .icon-text {
+          position: relative;
+          align-self: center;
+          margin-top: 25px;
+          width: 200px;
+          height: 100px;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  /* Конец блока 'О нас' */
+
+  #main-map {
+    position: relative;
+    width: $width;
+    height: 600px;
+
+    h2 {
+      font-size: $mobile-h2-font;
+    }
+
+    div {
+      width: 280px;
+      height: 300px;
+      iframe {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  /* Конец раздела "Как добраться" */
+
+  #main-form {
+    height: 650px;
+
+    h2 {
+      width: 80%;
+      font-size: $mobile-h2-font;
+    }
+
+    #main-form-submit {
+      width: 75%;
+      margin-top: 50px;
+
+      #main-formEmail {
+        padding-left: $mobile-form-padding;
+        font-size: $mobile-form-font;
+      }
+
+      #main-formTheme {
+        padding-left: $mobile-form-padding;
+        font-size: $mobile-form-font;
+      }
+
+      #main-formMess {
+        width: 93%;
+        padding-left: $mobile-form-padding;
+        font-size: $mobile-form-font;
+      }
+
+      button {
+        align-self: center;
+      }
+    }
+  }
+
+  /* Конец блока обратной связи */
+
+  footer {
+    display: $flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 125px;
+    
+    #footer-creators {
+      margin-top: -50px;
+      width: 90%;
+    }
+
+    #footer-data {
+      margin-top: -50px;
+    }
+  }
+  
+}
+
+@media (min-width: 1800px){
+  header {
+    height: 1250px;
+    h1 {
+      font-size: 68px;
+    }
+
+    #header-block {
+      height: 100%;
+    }
+
+    #header-block-data {
+      height: 200px;
+      img {
+        height: 200px;
+      }
+
+      span {
+        font-size: $pc-header-font;
+      }
+
+      div {
+        font-size: $pc-header-font;
+      }
+    } 
+  }
+
+  #main-about {
+    margin-top: -30px;
+    height: 1000px;
+    div {
+      h2 {
+        font-size: $pc-h2-font;
+      }
+      
+      p {
+        font-size: 28px;
+      }
+    }
+
+    h3 {
+      margin-top: -150px;
+      font-size: $pc-h2-font;
+    }
+
+    span {
+      .icon-block {
+        width: 400px;
+        height: 450px;
+        svg {
+          width: 300px;
+          height: 300px;
+        }
+
+        .icon-text {
+          font-size: 36px;
+        }
+      }
+    }
+  }
+
+  #main-map {
+    height: 1000px;
+    h2 {
+      font-size: $pc-h2-font;
+    }
+
+    div {
+      margin-top: 100px;
+      width: 1000px;
+      height: 700px;
+      iframe {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  #main-form {
+    h2 {
+      font-size: $pc-h2-font;
+    }
+
+    #main-form-submit {
+      width: 60%;
+      #main-formEmail {
+        width: 99%;
+        height: 75px;
+        font-size: $pc-form-font;
+      }
+
+      #main-formTheme {
+        width: 99%;
+        height: 75px;
+        font-size: $pc-form-font;
+      }
+
+      #main-formMess {
+        width: 98%;
+        height: 75px;
+        font-size: $pc-form-font;
+      }
+
+      button {
+        width: 200px;
+        height: 100px;
+        font-size: 28px;
+      }
+    }
+  }
+}
+
+@media (min-width: 650px) and (max-width: 1100px){
+
+  header {
+    h1 {
+      font-size: 36px;
+    }
+  }
+
+  #header-block-data {
+    height: 150px;
+
+    div {
+      flex-basis: 87.5%;
+      text-align: center;
+      font-size: 14px;
+
+      p {
+        margin-top: -20px;
+      }
+
+      p:last-child {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .header-block-data-menu {
+    flex-basis: 50%;
+    font-size: 18px;
+    text-align: $text-center;
+  }
+
+  /* Конец headerа */
+
+  #main-about {
+    height: 900px;
+
+    h3 {
+      margin-top: 150px;
+    }
+  }
+
+  /* Конец блока 'О нас' */
+
+  #main-map {
+    div {
+      width: 600px;
+      height: 600px;
+      iframe {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  /* Конец блока "Как добраться */
+
+  #main-form {
+    form {
+      width: 80%;
+      #main-formMess {
+        width: 94%;
+      }
+    }
+  }
+
+}
+
+
+
+
+
+
+
+  
+  
