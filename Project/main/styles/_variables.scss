@@ -5,11 +5,29 @@ $flexWrap: wrap;
 $justify-center: center;
 $pad-top: 50px;
 $width: 100%;
+
+// Шрифты
+
 $MontserratAlt: 'Montserrat Alternates', sans-serif;
 $Montserrat: 'Montserrat', sans-serif;
 $Lato: 'Lato', sans-serif;
-$white: white;
+$text-center: center;
+$pc-header-font: 32px;
+$pc-h2-font: 52px;
+$pc-form-font: 32px;
+$laptop-header-font: 18px;
+$laptop-h2-font: 40px;
+$laptop-form-font: 22px;
+$mobile-h2-font: 32px;
+$mobile-form-font: 16px;
+$mobile-form-padding: 5px;
+
+// Цвета
+
+$text-color: white;
 $bg-color: rgb(31, 31, 31);
+
+
 $pointer: pointer;
 $scale: scale(1.05);
 $transition: 0.4s ease;
