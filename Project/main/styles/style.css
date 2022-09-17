@@ -26,17 +26,32 @@ header {
   min-width: 100%;
   height: 770px;
 }
-header h1 {
+header #header-greetings-info {
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  top: 0px;
-  height: 80%;
+  width: 100%;
+  height: 100%;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  color: white;
+}
+header #header-greetings-info h1 {
+  width: 80%;
+  height: 100px;
+  margin-top: -100px;
   font-size: 50px;
   font-weight: bold;
-  font-family: "Montserrat", sans-serif;
-  color: white;
+}
+header #header-greetings-info ul {
+  width: 80%;
+  margin-top: 50px;
+}
+header #header-greetings-info ul li {
+  height: 40px;
+  font-size: 22px;
 }
 
 #header-block {
@@ -75,7 +90,7 @@ header h1 {
 #header-block-data div {
   display: flex;
   flex-wrap: wrap;
-  flex-basis: 11%;
+  flex-basis: 15%;
   font-size: 18px;
   font-family: "Lato", sans-serif;
   color: white;
@@ -295,13 +310,16 @@ footer p:last-child {
 
 @media (max-width: 500px) {
   header {
-    height: 600px;
+    height: 650px;
   }
-  header h1 {
-    width: 99%;
-    height: 60%;
-    font-size: 28px;
+  header #header-greetings-info {
     text-align: center;
+  }
+  header #header-greetings-info h1 {
+    font-size: 28px;
+  }
+  header #header-greetings-info ul li {
+    font-size: 14px;
   }
   .header-block-data-menu {
     display: none;
@@ -494,12 +512,16 @@ footer p:last-child {
     margin-top: -50px;
   }
 }
-@media (min-width: 1800px) {
+@media (min-width: 2000px) {
   header {
     height: 1250px;
   }
-  header h1 {
+  header #header-greetings-info h1 {
     font-size: 68px;
+  }
+  header #header-greetings-info ul li {
+    height: 60px;
+    font-size: 38px;
   }
   header #header-block {
     height: 100%;
@@ -514,6 +536,7 @@ footer p:last-child {
     font-size: 32px;
   }
   header #header-block-data div {
+    flex-basis: 15%;
     font-size: 32px;
   }
   #main-about {
@@ -524,7 +547,7 @@ footer p:last-child {
     font-size: 52px;
   }
   #main-about div p {
-    font-size: 28px;
+    font-size: 32px;
   }
   #main-about h3 {
     margin-top: -150px;
@@ -584,8 +607,11 @@ footer p:last-child {
   }
 }
 @media (min-width: 650px) and (max-width: 1100px) {
-  header h1 {
+  header #header-greetings-info h1 {
     font-size: 36px;
+  }
+  header #header-greetings-info ul li {
+    font-size: 18px;
   }
   #header-block-data {
     height: 150px;
