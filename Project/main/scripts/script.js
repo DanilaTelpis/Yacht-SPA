@@ -10,3 +10,6 @@ document.getElementById('x-mark').onclick = function(event){
   event.target.parentNode.classList.add('closed');
   document.querySelector('#hamburger-menu > i').style.right='-20px';
 }
+
+
+
