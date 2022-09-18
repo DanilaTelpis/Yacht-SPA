@@ -8,6 +8,23 @@
   scroll-behavior: smooth;
 }
 
+.response {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 250px;
+  height: 60px;
+  border-radius: 5px;
+  border: 2px solid $bg-color;
+  font-size: 20px;
+  font-family: $Montserrat;
+  text-align: $text-center;
+  background-color: green;
+  color: $text-color;
+  z-index: 20;
+}
+
 a {
   text-decoration: none;
   color: $text-color;
@@ -34,22 +51,12 @@ header {
     font-family: $Montserrat;
     color: $text-color;
     h1 {
+      margin-top: -150px;
       width: 80%;
       height: 100px;
-      margin-top: -100px;
-      font-size: 50px;
+      font-size: 46px;
       font-weight: bold;
       text-align: $text-center;
-    }
-
-    ol {
-      width: 70%;
-      margin-top: 50px;
-      li {
-        height: 40px;
-        font-size: 22px;
-        text-align: left;
-      }
     }
   }
 
@@ -128,6 +135,36 @@ header {
 }
 
 /* Конец headerа */
+
+#main-services {
+  display: $flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 750px;
+  background-color: $bg-color;
+  font-family: $Montserrat;
+  color: $text-color;
+  h2 {
+    margin-top: 100px;
+    width: $width;
+    height: 50px;
+    font-size: $laptop-h2-font;
+    text-align: $text-center;
+  }
+  ul {
+    width: 50%;
+    margin-left: 5vw;
+    li {
+      padding-left: 10px;
+      width: auto;
+      height: 70px;
+      font-size: 28px;
+      text-decoration: underline;
+    }
+  }
+}
+
+/* Конец блока услуг */
 
 #main-about {
   display: $flex;
@@ -317,6 +354,9 @@ header {
       transform: $scale;
       background-color: rgb(52, 52, 52);
     }
+    button:active {
+      transform: translateY(2px);
+    }
   }
 }
 
@@ -348,12 +388,6 @@ footer {
       text-align: $text-center;
       h1 {
         font-size: 28px;
-      }
-
-      ol {
-        li {
-          font-size: 14px;
-        }
       }
     }
   } 
@@ -446,6 +480,22 @@ footer {
   }
 
   /* Конец headerа */
+
+  #main-services {
+    height: 900px;
+    h2 {
+      margin-top: 200px;
+      height: auto;
+      font-size: $mobile-h2-font;
+    }
+    ul {
+      li {
+        font-size: 14px;
+      }
+    }
+  }
+  
+  /* Конец блока услуг */
 
   #main-about {
     position: relative;
@@ -588,13 +638,6 @@ footer {
       h1 {
         font-size: 68px;
       }
-
-      ol {
-        li {
-          height: 60px;
-          font-size: 38px;
-        }
-      }
     }
 
     #header-block {
@@ -617,6 +660,23 @@ footer {
       }
     } 
   }
+
+  /* Конец header */
+
+  #main-services {
+    margin-top: -50px;
+    height: 900px;
+    h2 {
+      font-size: $pc-h2-font;
+    }
+    ul {
+      li {
+        font-size: 32px;
+      }
+    }
+  }
+  
+  /* Конец блока услуг */
 
   #main-about {
     margin-top: -30px;
@@ -652,6 +712,8 @@ footer {
     }
   }
 
+  /* Конец блока "О нас" */
+
   #main-map {
     height: 1000px;
     h2 {
@@ -668,6 +730,8 @@ footer {
       }
     }
   }
+
+  /* Конец раздела "Как добраться" */
 
   #main-form {
     h2 {
@@ -708,13 +772,7 @@ footer {
   header {
     #header-greetings-info {
       h1 {
-        font-size: 36px;
-      }
-
-      ol {
-        li {
-          font-size: 18px;
-        }
+        font-size: 42px;
       }
     }
   }
@@ -738,24 +796,47 @@ footer {
   }
 
   .header-block-data-menu {
-    flex-basis: 50%;
+    flex-basis: 55%;
     font-size: 18px;
     text-align: $text-center;
   }
 
   /* Конец headerа */
 
+  #main-services {
+    height: 700px;
+    h2 {
+
+      height: auto;
+      font-size: $laptop-h2-font;
+    }
+
+    ul {
+      margin-top: 50px;
+      li {
+        font-size: 20px;
+      }
+    }
+  }
+  
+  /* Конец блока услуг */
+
   #main-about {
     height: 900px;
 
     h3 {
-      margin-top: 150px;
+      margin-top: -50px;
     }
   }
 
   /* Конец блока 'О нас' */
 
   #main-map {
+    height: 700px;
+    h2 {
+      margin-top: -100px;
+    }
+
     div {
       width: 600px;
       height: 600px;
