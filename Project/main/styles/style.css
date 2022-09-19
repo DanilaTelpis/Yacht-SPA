@@ -481,7 +481,9 @@ footer p:last-child {
     height: 600px;
   }
   #main-about span .icon-block {
+    position: relative;
     flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     margin-top: -50px;
     width: 100%;
