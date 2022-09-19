@@ -11,16 +11,19 @@ document.getElementById('x-mark').onclick = function(event){
   document.querySelector('#hamburger-menu > i').style.right='-20px';
 }
 
-let bool;
+document.getElementById('main-form-submit').addEventListener('submit', respMess);
 
-function resp(response){
-  bool = response;  
-}
+function respMess(event){
 
-document.getElementById('form-button').addEventListener('click',respMess);
-
-function respMess(){
-
+  let bool = 0;
+  
+  if (document.getElementById('main-formEmail').value.length < 5 || document.getElementById('main-formEmail').value == ''){
+    bool = 0;
+  } else if (document.getElementById('main-formTheme').value.length < 11 || document.getElementById('main-formTheme').value.length > 18){
+    bool = 0;
+  } else {
+    bool = 1;
+  }
 
   let div = document.createElement('div');
   div.classList.add('response');
