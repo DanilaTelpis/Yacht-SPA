@@ -27,14 +27,16 @@ function respMess(){
 
   if (bool == 1){
     div.innerHTML = 'Сообщение отправлено успешно';
+    div.style.backgroundColor='green';
   } else {
     div.innerHTML = 'Сообщение не было отправлено';
+    div.style.backgroundColor='red';
   }
 
   div.style.top=`${document.getElementById('form-button').getBoundingClientRect().top + 80}px`;
   div.style.marginLeft=`0px`;
-  document.getElementById('main-form').append(div); 
-  setTimeout(() => div.remove(), 1000);
+  setTimeout(() => document.getElementById('main-form').append(div), 500); 
+  setTimeout(() => div.remove(), 1500);
 }
 
 
