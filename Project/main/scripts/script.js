@@ -14,9 +14,10 @@ document.getElementById('x-mark').onclick = function(event){
 document.getElementById('main-form-submit').addEventListener('submit', respMess);
 
 function respMess(event){
+  event.preventDefault();
 
   let bool = 0;
-  
+
   if (document.getElementById('main-formEmail').value.length < 5 || document.getElementById('main-formEmail').value == ''){
     bool = 0;
   } else if (document.getElementById('main-formTheme').value.length < 11 || document.getElementById('main-formTheme').value.length > 18){
@@ -31,6 +32,7 @@ function respMess(event){
   if (bool == 1){
     div.innerHTML = 'Сообщение отправлено успешно';
     div.style.backgroundColor='green';
+    document.forms['main-form-submit'].submit();
   } else {
     div.innerHTML = 'Сообщение не было отправлено';
     div.style.backgroundColor='red';
