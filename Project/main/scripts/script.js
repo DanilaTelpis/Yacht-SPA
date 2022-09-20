@@ -15,6 +15,7 @@ document.getElementById('main-form-submit').addEventListener('submit', respMess)
 
 function respMess(event){
   event.preventDefault();
+  console.log('Скрипт сработал');
 
   let bool = 0;
 
@@ -27,15 +28,17 @@ function respMess(event){
   }
 
   let div = document.createElement('div');
-  div.classList.add('response');
+  div.classList.add('response'); 
 
   if (bool == 1){
     div.innerHTML = 'Сообщение отправлено успешно';
     div.style.backgroundColor='green';
     document.forms['main-form-submit'].submit();
+    console.log('Форма отправлена');
   } else {
     div.innerHTML = 'Сообщение не было отправлено';
     div.style.backgroundColor='red';
+    console.log('Форма не отправлено');
   }
 
   div.style.top=`${document.getElementById('form-button').getBoundingClientRect().top + 80}px`;
